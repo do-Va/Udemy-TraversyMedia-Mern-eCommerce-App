@@ -15,7 +15,6 @@ router.get(
   asyncHandler(async (req, res) => {
     // Product içerisindeki bütün elemanları çağırıyoruz.
     const products = await Product.find({});
-
     res.json(products);
   })
 );
