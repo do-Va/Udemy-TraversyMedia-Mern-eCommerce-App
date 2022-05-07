@@ -99,7 +99,10 @@ export const payOrder = (orderId, paymentResult) => async (
       config
     );
 
-    dispatch({ type: ORDER_PAY_SUCCESS, payload: data });
+    dispatch({
+      type: ORDER_PAY_SUCCESS,
+      payload: data,
+    });
   } catch (error) {
     dispatch({
       type: ORDER_PAY_FAIL,
