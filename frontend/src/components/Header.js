@@ -25,12 +25,12 @@ const Header = () => {
           <LinkContainer to="/">
             <Navbar.Brand>ProShop</Navbar.Brand>
           </LinkContainer>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
+          <Navbar.Toggle aria-controls="navbarscroll" />
+          <Navbar.Collapse id="navbarscroll">
             <Nav
               className="ms-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
-              navbarScroll
+              navbarscroll="true"
             >
               <LinkContainer to="/cart">
                 <Nav.Link>
