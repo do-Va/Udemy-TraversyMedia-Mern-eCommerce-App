@@ -6,8 +6,13 @@ import Message from '../components/Message';
 import Loader from '../components/Loader';
 import Product from '../components/Product';
 import { listProducts } from '../actions/productActions';
+import { useParams } from 'react-router-dom';
 
 const HomeScreen = () => {
+  const params = useParams();
+
+  const keyword = params.keyword;
+
   const dispatch = useDispatch();
 
   // Kullanacağımız reducer'ımızı seçiyoruz.
@@ -17,8 +22,8 @@ const HomeScreen = () => {
 
   // Sayfa yüklendiğinde productReducer'ımıza listProduct aksiyonlu dispatchimizi önderiyoruz. gönderiyoruz.
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword));
+  }, [dispatch, keyword]);
 
   return (
     <>
